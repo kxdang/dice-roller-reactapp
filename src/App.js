@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import RollDice from "./RollDice";
+import "./App.css";
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <i class="fas fa-dice-one"></i>
+      <div className="App">
+        <RollDice />
       </div>
     );
   }
