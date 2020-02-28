@@ -25,7 +25,7 @@ class RollDice extends Component {
     //Wait 1 second and set isRolling to false
     setTimeout(() => {
       this.setState({ isRolling: false });
-    }, 1000);
+    }, 800);
   }
 
   render() {
@@ -33,8 +33,8 @@ class RollDice extends Component {
       <div className="RollDice">
         <h1>React Dice Roller</h1>
         <div className="RollDice-die">
-          <Die face={this.state.die1} />
-          <Die face={this.state.die2} />
+          <Die face={this.state.die1} rolling={this.state.isRolling} />
+          <Die face={this.state.die2} rolling={this.state.isRolling} />
         </div>
 
         <button onClick={this.rollDice} disabled={this.state.isRolling}>

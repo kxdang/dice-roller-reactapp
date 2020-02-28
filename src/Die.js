@@ -4,7 +4,15 @@ import "./Die.css";
 class Die extends Component {
   render() {
     const { face } = this.props;
-    return <i className={`Die fas fa-dice-${face}`}></i>;
+    return (
+      <div>
+        <i
+          className={`Die fas fa-dice-${face} ${
+            this.props.rolling ? "Die-shake" : ""
+          }`}
+        ></i>
+      </div>
+    );
   }
 }
 
